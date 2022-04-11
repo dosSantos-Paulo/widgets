@@ -7,6 +7,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.br.widget.circularpercent.CircularPercent
 import com.br.widgets.databinding.ActivityCircularPercentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.lang.Exception
 
 class CircularPercentActivity : AppCompatActivity(),
     CircularPercent.Companion.CircularPercentInterface {
@@ -23,11 +25,22 @@ class CircularPercentActivity : AppCompatActivity(),
 
     private fun setupOnClickListener() {
         binding.updateButton.setOnClickListener {
-            val newPercent = binding.textField.editText?.text?.toString()?.toFloat()
 
-            newPercent?.let {
-                binding.circularPercent.setNewPercent(it / 100)
+            try {
+                val newPercent = binding.textField.editText?.text?.toString()?.toFloat()
+                newPercent?.let {
+                    binding.circularPercent.setNewPercent(it / 100)
+                }
+            } catch (ex: Exception) {
+                MaterialAlertDialogBuilder(this@CircularPercentActivity).apply {
+                    setTitle("Oops")
+                    setMessage("Você não pode deixar em branco")
+                    setPositiveButton("ok") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                }.show()
             }
+
             binding.textField.editText?.setText("")
         }
     }

@@ -13,7 +13,7 @@ import com.br.widget.R
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
-class CircularPercent(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class CircularPercent(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private var circularInterface: CircularPercentInterface? = null
 
@@ -24,14 +24,14 @@ class CircularPercent(context: Context, attrs: AttributeSet) : View(context, att
     private var itemStroke = 8f
     private var oldAngle = 0F
     private var itemColor = Color.BLACK
-    private val paint = Paint().apply {
+    private var paint = Paint().apply {
         color = itemColor
         strokeCap = Paint.Cap.ROUND
         style = Paint.Style.STROKE
         strokeWidth = itemStroke
     }
 
-    private val rectF = RectF(itemStroke, itemStroke, 0f, 0f)
+    private val rectF = RectF(itemStroke * 1.5F, itemStroke * 1.5F, 0F, 0F)
 
     private fun setEndAngle(angle: Float) {
         val df = DecimalFormat("#.#").apply {
@@ -45,9 +45,16 @@ class CircularPercent(context: Context, attrs: AttributeSet) : View(context, att
     }
 
     init {
-        context.theme.obtainStyledAttributes(R.styleable.CircularPercent).apply {
+        context.theme.obtainStyledAttributes(attrs, R.styleable.CircularPercent, 0, 0).apply {
             itemColor = getColor(R.styleable.CircularPercent_circleColor, itemColor)
             itemStroke = getDimension(R.styleable.CircularPercent_circleStrokeWidth, itemStroke)
+
+            paint = Paint().apply {
+                color = itemColor
+                strokeCap = Paint.Cap.ROUND
+                style = Paint.Style.STROKE
+                strokeWidth = itemStroke
+            }
         }
     }
 

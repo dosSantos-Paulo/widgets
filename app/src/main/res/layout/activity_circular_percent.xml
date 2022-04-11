@@ -11,11 +11,12 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_margin="40dp"
-        app:circleColor="#FF0000"
-        app:circleStrokeWidth="50dp"
+        app:circleColor="#00F7FF"
+        app:circleStrokeWidth="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -37,14 +38,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="porcentagem"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularPercent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,7 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:text="atualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField" />
+        app:layout_constraintTop_toBottomOf="@+id/circularPercent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
