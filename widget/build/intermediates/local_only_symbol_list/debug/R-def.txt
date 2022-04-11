@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+attr? firstColor
+attr? secondColor
+layout activity_main
+styleable WaveLoading firstColor secondColor
