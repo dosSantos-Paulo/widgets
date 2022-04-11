@@ -6,9 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".view.waveloading.WaveLoadingActivity">
 
-    <TextView
+    <com.br.widget.waveloading.WaveLoading
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="waveLoading"/>
+        app:firstColor="#F800FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:secondColor="#0073FF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
