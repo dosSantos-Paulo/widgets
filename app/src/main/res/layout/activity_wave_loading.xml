@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".view.main.MainActivity">
+    tools:context=".view.waveloading.WaveLoadingActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/my_button_layout"
-        tools:itemCount="5"/>
+        android:text="waveLoading"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
