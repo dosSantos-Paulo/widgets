@@ -246,7 +246,9 @@ int attr chipStrokeColor 0x0
 int attr chipStrokeWidth 0x0
 int attr chipStyle 0x0
 int attr chipSurfaceColor 0x0
+int attr circleColor 0x0
 int attr circleRadius 0x0
+int attr circleStrokeWidth 0x0
 int attr circularProgressIndicatorStyle 0x0
 int attr circularflow_angles 0x0
 int attr circularflow_defaultAngle 0x0
@@ -4652,6 +4654,9 @@ int styleable ChipGroup_chipSpacingVertical 3
 int styleable ChipGroup_selectionRequired 4
 int styleable ChipGroup_singleLine 5
 int styleable ChipGroup_singleSelection 6
+int[] styleable CircularPercent { 0x0, 0x0 }
+int styleable CircularPercent_circleColor 0
+int styleable CircularPercent_circleStrokeWidth 1
 int[] styleable CircularProgressIndicator { 0x0, 0x0, 0x0 }
 int styleable CircularProgressIndicator_indicatorDirectionCircular 0
 int styleable CircularProgressIndicator_indicatorInset 1

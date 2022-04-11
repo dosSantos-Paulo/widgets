@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="WaveLoading">
-        <attr name="firstColor" format="color"/>
-        <attr name="secondColor" format="color"/>
+        <attr name="firstColor" format="color" />
+        <attr name="secondColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircularPercent">
+        <attr name="circleColor" format="color" />
+        <attr name="circleStrokeWidth" format="dimension" />
     </declare-styleable>
 </resources>
