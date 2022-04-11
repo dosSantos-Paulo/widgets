@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="CircularPercent">
+        <attr format="color" name="circleColor"/>
+        <attr format="dimension" name="circleStrokeWidth"/>
+    </declare-styleable>
     <declare-styleable name="WaveLoading">
         <attr format="color" name="firstColor"/>
         <attr format="color" name="secondColor"/>

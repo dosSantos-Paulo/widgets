@@ -1,6 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+attr? circleColor
+attr? circleStrokeWidth
 attr? firstColor
 attr? secondColor
 layout activity_main
+styleable CircularPercent circleColor circleStrokeWidth
 styleable WaveLoading firstColor secondColor

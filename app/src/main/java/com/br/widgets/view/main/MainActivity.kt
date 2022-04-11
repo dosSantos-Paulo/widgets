@@ -26,6 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createButtons() = mutableListOf<MyButton>().apply {
-        add(MyButton(ButtonAction.BUTTONS.WAVE_LOADING))
+        ButtonAction.BUTTONS.values().forEach { add(MyButton(it)) }
     }
 }
